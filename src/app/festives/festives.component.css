@@ -32,3 +32,12 @@ th.mat-header-cell {
   font-weight: 600;
   font-size: 18px;
 }
+
+.bimage {
+  background-image: url('../../assets/festivals.jpg');
+  
+}
+
+h1{
+  color: white;
+}
