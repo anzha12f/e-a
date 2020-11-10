@@ -1,0 +1,34 @@
+.type-icon {
+  color: #9ab855;
+  margin-right: 5px;
+}
+
+.indent {
+  width: 20px;
+}
+
+table {
+  width: 100%;
+}
+
+th.mat-header-cell {
+    border: 0;
+    text-align: center;
+}
+
+.mat-header-row {
+  background-color: rgba(128, 128, 128, 0.1);
+  height: 5em;
+}
+
+.container{
+  margin: 15px;
+  height: auto;
+  border:3px solid green;
+  overflow: auto
+ }
+
+ .mat-tree-node, .mat-nested-tree-node {
+  font-weight: 600;
+  font-size: 18px;
+}

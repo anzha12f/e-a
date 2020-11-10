@@ -1,0 +1,51 @@
+<div class="container">
+  <table class="mat-table">
+    <thead class="mat-header-row" fxLayoutAlign="center center">
+      <th class="mat-header-cell" fxFlex>
+        <h1>Music Festivals View</h1>
+      </th>
+    </thead>
+  </table>
+ 
+      <mat-tree [dataSource]="dataSource" [treeControl]="treeControl">
+        <mat-tree-node
+          *matTreeNodeDef="let node"
+          matTreeNodeToggle
+          matTreeNodePadding
+        >
+          <div fxFlex fxLayoutAlign=" center">
+            <button mat-icon-button disabled></button>
+            <mat-icon class="type-icon" [attr.aria-label]="node.type + 'icon'">
+              {{ node.type === "file" ? "description" : "cake" }}
+            </mat-icon>
+            {{ node.recordLabel }}
+          </div>
+        </mat-tree-node>
+       
+        <mat-tree-node
+          *matTreeNodeDef="let node; when: hasChild"
+          matTreeNodePadding
+        >
+          <div fxFlex fxLayoutAlign=" center">
+            <button
+              mat-icon-button
+              matTreeNodeToggle
+              [attr.aria-label]="'toggle ' + node.name"
+            >
+              <mat-icon class="mat-icon-rtl-mirror">
+                {{
+                  treeControl.isExpanded(node) ? "expand_more" : "chevron_right"
+                }}
+              </mat-icon>
+            </button>
+            <mat-icon class="type-icon" [attr.aria-label]="node.type + 'icon'">
+              {{ node.type === "file" ? "description" : "event" }}
+            </mat-icon>
+            {{ node.name }}
+          </div>
+          
+        </mat-tree-node>
+       
+      </mat-tree>
+    
+</div>
